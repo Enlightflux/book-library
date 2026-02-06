@@ -1,0 +1,135 @@
+:root {
+  --primary: #020617;
+  --secondary: #52525c;
+  --border: #f4f4f5;
+  --blue-highlight: #dbeafe;
+  --pink-highlight: #f4d2fb;
+  --green-highlight: #ddf3cf;
+  --brand: #2c7fff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* outline: 0.1px lightblue solid; */
+  font-family: roboto;
+}
+
+body {
+  margin: 3rem 3rem;
+}
+.full-page {
+  display: grid;
+  gap: 3rem;
+}
+
+.library-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.book-container {
+  border: 2px solid var(--border);
+  /* width: 300px; */
+  /* height: 350px; */
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: white;
+}
+.book-container:hover {
+  filter: drop-shadow(0 0 0.9rem var(--border));
+}
+.main-area {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.top-part {
+  position: relative;
+  background-color: var(--border);
+}
+.book-category {
+  background-color: var(--pink-highlight);
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.book-logo {
+  display: grid;
+  height: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-logo > .logo {
+  display: grid;
+  align-items: center;
+  background-color: var(--pink-highlight);
+  text-align: center;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.bottom-part {
+  border-top: 2px solid var(--border);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 1rem 1rem;
+  min-width: 0;
+}
+
+.book-name {
+  font-size: 1.5rem;
+  padding-bottom: 0.3rem;
+  font-weight: bold;
+  color: var(--brand);
+  width: 100%;
+  min-width: 0;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-name:hover {
+  white-space: normal;
+  overflow: visible;
+}
+.author {
+  color: var(--secondary);
+  font-size: 0.9em;
+}
+
+.additional-info {
+  border-top: 1px dashed var(--pink-highlight);
+  padding-top: 1rem;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.additional-info > div {
+  font-size: 0.8rem;
+  color: var(--secondary);
+  padding-left: 1rem;
+}
+
+span {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--secondary);
+}
